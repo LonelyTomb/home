@@ -1,27 +1,41 @@
 {
-    "private": true,
-    "scripts": {
-        "dev": "npm run development",
-        "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-        "watch": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-        "watch-poll": "npm run watch -- --watch-poll",
-        "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
-        "prod": "npm run production",
-        "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
-    },
-    "devDependencies": {
-        "axios": "^0.17",
-        "cross-env": "^5.1",
-        "fs": "^0.0.1-security",
-        "laravel-mix": "^2.0",
-        "lodash": "^4.17.4",
-        "popper.js": "^1.12",
-        "vue": "^2.5.7"
-    },
-    "dependencies": {
-        "babel-plugin-syntax-dynamic-import": "^6.18.0",
-        "cloudinary": "^1.11.0",
-        "cloudinary-core": "^2.5.0",
-        "uikit": "^3.0.0-rc.5"
-    }
+  "name": "lonelytomb",
+  "version": "1.0.0",
+  "description": "My Portfolio",
+  "author": "Victory",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^5.3.6",
+    "@nuxtjs/dotenv": "^1.4.0",
+    "@nuxtjs/pwa": "^3.0.0-0",
+    "@nuxtjs/sitemap": "^1.3.0",
+    "autoprefixer": "^9.6.1",
+    "node-sass": "^4.12.0",
+    "nuxt": "^2.0.0",
+    "nuxt-purgecss": "^0.2.1",
+    "sass-loader": "^7.3.1"
+  },
+  "devDependencies": {
+    "@nuxtjs/eslint-config": "^1.0.1",
+    "@nuxtjs/eslint-module": "^1.0.0",
+    "@nuxtjs/tailwindcss": "^1.0.0",
+    "@vue/test-utils": "^1.0.0-beta.27",
+    "babel-eslint": "^10.0.1",
+    "babel-jest": "^24.1.0",
+    "eslint": "^6.1.0",
+    "eslint-config-prettier": "^4.1.0",
+    "eslint-plugin-nuxt": ">=0.4.2",
+    "eslint-plugin-prettier": "^3.0.1",
+    "jest": "^24.1.0",
+    "prettier": "^1.16.4",
+    "vue-jest": "^4.0.0-0"
+  }
 }
