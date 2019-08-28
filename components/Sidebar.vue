@@ -1,74 +1,76 @@
 <template>
   <aside
-    class="sidebar absolute left-0 overflow-scroll"
+    class="sidebar absolute left-0 overflow-scroll md:overflow-auto flex flex-col justify-between"
     :class="{ 'hide-sidebar': getSidebarState === false && mobile === true }"
   >
-    <div class="image-part">
-      <img src="/png/dice.jpg" alt="profile-picture" />
-    </div>
-    <div class="links">
-      <ul>
-        <li class="flex flex-row">
-          <nuxt-link
-            to="/"
-            class="flex flex-row h-full justify-left w-full p-3 text-muted"
-            ><img
-              src="/svg/home.svg"
-              alt="home"
-              class="w-3 flex items-center mr-3"
-            />
-            HOME</nuxt-link
-          >
-        </li>
-        <li class="flex flex-row">
-          <nuxt-link
-            to="/about"
-            class="flex flex-row h-full justify-left w-full p-3 text-muted"
-            ><img
-              src="/svg/user.svg"
-              alt="about me"
-              class="w-3 flex items-center mr-3"
-            />
-            ABOUT ME</nuxt-link
-          >
-        </li>
-        <li class="flex flex-row">
-          <nuxt-link
-            to="/resume"
-            class="flex flex-row h-full justify-left w-full p-3 text-muted"
-            ><img
-              src="/svg/certificate.svg"
-              alt="resume"
-              class="w-3 flex items-center mr-3"
-            />
-            RESUME</nuxt-link
-          >
-        </li>
-        <li class="flex flex-row">
-          <nuxt-link
-            to="/portfolio"
-            class="flex flex-row h-full justify-left w-full p-3 text-muted"
-            ><img
-              src="/svg/suitcase.svg"
-              alt="protfolio"
-              class="w-3 flex items-center mr-3"
-            />
-            PORTFOLIO</nuxt-link
-          >
-        </li>
-        <li class="flex flex-row">
-          <nuxt-link
-            to="/contact"
-            class="flex flex-row h-full justify-left w-full p-3 text-muted"
-            ><img
-              src="/svg/envelope.svg"
-              alt="contact"
-              class="w-3  flex items-center mr-3"
-            />
-            CONTACT</nuxt-link
-          >
-        </li>
-      </ul>
+    <div class="wrapper">
+      <div class="image-part">
+        <img src="/png/dice.jpg" alt="profile-picture" />
+      </div>
+      <div class="links">
+        <ul>
+          <li class="flex flex-row">
+            <nuxt-link
+              to="/"
+              class="flex flex-row h-full justify-left w-full p-3 text-muted"
+              ><img
+                src="/svg/home.svg"
+                alt="home"
+                class="w-3 flex items-center mr-3"
+              />
+              HOME</nuxt-link
+            >
+          </li>
+          <li class="flex flex-row">
+            <nuxt-link
+              to="/about"
+              class="flex flex-row h-full justify-left w-full p-3 text-muted"
+              ><img
+                src="/svg/user.svg"
+                alt="about me"
+                class="w-3 flex items-center mr-3"
+              />
+              ABOUT ME</nuxt-link
+            >
+          </li>
+          <li class="flex flex-row">
+            <nuxt-link
+              to="/resume"
+              class="flex flex-row h-full justify-left w-full p-3 text-muted"
+              ><img
+                src="/svg/certificate.svg"
+                alt="resume"
+                class="w-3 flex items-center mr-3"
+              />
+              RESUME</nuxt-link
+            >
+          </li>
+          <li class="flex flex-row">
+            <nuxt-link
+              to="/portfolio"
+              class="flex flex-row h-full justify-left w-full p-3 text-muted"
+              ><img
+                src="/svg/suitcase.svg"
+                alt="protfolio"
+                class="w-3 flex items-center mr-3"
+              />
+              PORTFOLIO</nuxt-link
+            >
+          </li>
+          <li class="flex flex-row">
+            <nuxt-link
+              to="/contact"
+              class="flex flex-row h-full justify-left w-full p-3 text-muted"
+              ><img
+                src="/svg/envelope.svg"
+                alt="contact"
+                class="w-3  flex items-center mr-3"
+              />
+              CONTACT</nuxt-link
+            >
+          </li>
+        </ul>
+      </div>
     </div>
     <Footer></Footer>
   </aside>
@@ -110,7 +112,7 @@ aside {
         border: {
           bottom: 1px solid #202226;
         }
-        &.nuxt-link-active {
+        &.nuxt-link-exact-active {
           color: #fff;
         }
       }

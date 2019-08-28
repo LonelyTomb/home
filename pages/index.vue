@@ -24,6 +24,11 @@ export default {}
   }
   */
 main {
+  background: {
+    image: url('/png/bg.jpg');
+    repeat: no-repeat;
+    size: cover;
+  }
   .container {
     margin: 0 auto;
     min-height: 100vh;

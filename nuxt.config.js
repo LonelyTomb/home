@@ -43,7 +43,33 @@ export default {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
-    '@nuxtjs/pwa',
+    [
+      '@nuxtjs/pwa',
+      {
+        manifest: {
+          name: "Victory's site",
+          short_name: 'victory',
+          start_url: '/',
+          lang: 'en-US',
+          display: 'standalone',
+          background_color: '#fff',
+          theme_color: '#542ea4',
+          description: 'Welcome to Victory Online',
+          icons: [
+            {
+              src: '/favicon-16x16.png',
+              sizes: '16x16',
+              type: 'image/png'
+            },
+            {
+              src: '/favicon-32x32.png',
+              sizes: '32x32',
+              type: 'image/png'
+            }
+          ]
+        }
+      }
+    ],
     'nuxt-purgecss'
   ],
   purgeCSS: {},
