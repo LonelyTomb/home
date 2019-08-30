@@ -1,5 +1,9 @@
 <template>
-  <main></main>
+  <main class="h-screen">
+    <div>
+      tes
+    </div>
+  </main>
 </template>
 
 <script>

@@ -16,7 +16,7 @@ module.exports = {
       black: '#000',
       white: '#fff',
       dark: '#17181B',
-      primary: '#513779',
+      primary: '#00A3E1',
       muted: '#777'
     },
     spacing: {
@@ -76,6 +76,7 @@ module.exports = {
     },
     fontFamily: {
       sans: [
+        '"Playfair Display"',
         '-apple-system',
         'BlinkMacSystemFont',
         '"Segoe UI"',

@@ -1,5 +1,5 @@
 <template>
-  <main>
+  <main class="h-screen">
     <p>test</p>
   </main>
 </template>
