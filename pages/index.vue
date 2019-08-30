@@ -1,6 +1,6 @@
 <template>
-  <main>
-    <div class="container flex flex-col">
+  <div class="page-wrapper h-full">
+    <div class="container flex flex-col h-full">
       <h1 class="name flex flex-col md:flex-row text-4xl font-bold">
         <span class="mx-1">Victory</span>
         <span class="mx-1">Garuba</span>
@@ -10,11 +10,19 @@
         <span class="profession"><b>Full Stack Web Developer</b></span>
       </p>
     </div>
-  </main>
+  </div>
 </template>
 
 <script>
-export default {}
+import { mapActions } from 'vuex'
+export default {
+  mounted() {
+    this.toggleSidebar('reset')
+  },
+  methods: {
+    ...mapActions({ toggleSidebar: 'sidebar/toggleSidebar' })
+  }
+}
 </script>
 
 <style lang="scss">
@@ -23,15 +31,9 @@ export default {}
     @apply min-h-screen flex justify-center items-center text-center mx-auto;
   }
   */
-main {
-  background: {
-    image: url('/png/bg.jpg');
-    repeat: no-repeat;
-    size: cover;
-  }
+.page-wrapper {
   .container {
     margin: 0 auto;
-    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;

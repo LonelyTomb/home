@@ -1,9 +1,9 @@
 <template>
-  <main class="h-screen">
+  <div class="page-wrapper">
     <div>
       tes
     </div>
-  </main>
+  </div>
 </template>
 
 <script>

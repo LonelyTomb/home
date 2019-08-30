@@ -100,7 +100,7 @@ export default {
 
 <style scoped lang="scss">
 aside {
-  transition: 1s ease-in-out;
+  transition: 0.5s ease-in-out;
   &.hide-sidebar {
     left: -50%;
   }

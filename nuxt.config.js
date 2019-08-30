@@ -19,7 +19,7 @@ export default {
   /*
    ** Customize the progress-bar color
    */
-  loading: { color: '#fff' },
+  loading: false,
   /*
    ** Global CSS
    */
@@ -70,8 +70,14 @@ export default {
         }
       }
     ],
+    'nuxt-webfontloader',
     'nuxt-purgecss'
   ],
+  webfontloader: {
+    google: {
+      families: ['Playfair Display:400,700']
+    }
+  },
   purgeCSS: {},
   /*
    ** Axios module configuration

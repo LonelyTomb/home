@@ -1,7 +1,7 @@
 <template>
-  <main class="h-screen">
+  <div class="page-wrapper">
     <p>test</p>
-  </main>
+  </div>
 </template>
 
 <script>

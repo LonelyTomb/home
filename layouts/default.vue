@@ -2,15 +2,19 @@
   <div class="page mx-auto relative min-h-screen">
     <MobileSidebar
       :mobile="true"
-      class="w-1/2 sm:w-1/3 md:w-1/6 h-full bg-dark md:hidden z-50"
+      class="w-1/2 sm:w-1/3 md:w-1/6 h-full bg-dark md:hidden z-50 fixed"
     ></MobileSidebar>
-    <div class="wrapper h-screen">
-      <MobileHeader class="md:hidden"></MobileHeader>
+    <div class="wrapper h-full">
+      <MobileHeader class="md:hidden fixed w-full z-30"></MobileHeader>
       <div class="flex flex-row h-screen">
         <Sidebar
           class="w-1/2 sm:w-1/3 md:w-1/6 h-full bg-dark hidden md:flex"
         ></Sidebar>
-        <nuxt />
+        <main
+          class="w-full sm:w-2/3 md:w-5/6 h-full right-0 absolute p-3 pt-6 h-full"
+        >
+          <nuxt />
+        </main>
       </div>
     </div>
   </div>
@@ -26,32 +30,25 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-/*.page-enter-active {*/
-/*  transition: opacity 0.5s ease-out;*/
-/*}*/
-/*.page-leave-active {*/
-/*  transition: opacity 0.5s ease-in;*/
-/*}*/
-/*.page-enter,*/
-/*.page-leave-active {*/
-/*  opacity: 0;*/
-/*}*/
-/*.component-fade-enter-active,*/
-/*.component-fade-leave-active {*/
-/*  transition: opacity 0.3s ease;*/
-/*}*/
-/*.component-fade-enter, .component-fade-leave-to*/
-/*  !* .component-fade-leave-active below version 2.1.8 *! {*/
-/*  opacity: 0;*/
-/*}*/
+.page-enter-active {
+  animation: zoomInLeft 0.8s ease-out;
+}
+.page-leave-active {
+  transition: zoomOutRight 0.8s ease-in;
+}
 main {
   transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1);
+  background: {
+    image: url('/png/bg.jpg');
+    repeat: no-repeat;
+    size: cover;
+  }
 }
 .zoom-enter-active {
-  transition: opacity 0.5s ease-out;
+  transition: opacity 0.8s ease-out;
 }
 .zoom-leave-active {
-  transition: opacity 0.5s ease-in;
+  transition: opacity 0.8s ease-in;
 }
 .zoom-enter,
 .zoom-leave-active {

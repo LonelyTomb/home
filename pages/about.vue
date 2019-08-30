@@ -1,5 +1,5 @@
 <template>
-  <main class="h-screen px-3 absolute right-0 w-full sm:w-2/3 md:w-5/6">
+  <div class="page-wrapper h-full">
     <div
       class="title flex flex-row w-full justify-between pt-6 pb-3 px-3 font-bold"
     >
@@ -32,17 +32,24 @@
         </button>
       </div>
     </div>
-  </main>
+  </div>
 </template>
 
 <script>
+import { mapActions } from 'vuex'
 export default {
-  name: 'About'
+  name: 'About',
+  mounted() {
+    this.toggleSidebar()
+  },
+  methods: {
+    ...mapActions({ toggleSidebar: 'sidebar/toggleSidebar' })
+  }
 }
 </script>
 
 <style scoped lang="scss">
-main {
+.page-wrapper {
   .filter-blue {
     filter: invert(54%) sepia(88%) saturate(4471%) hue-rotate(169deg)
       brightness(102%) contrast(103%);

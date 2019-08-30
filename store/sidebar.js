@@ -2,8 +2,8 @@ export const state = () => ({
   sidebar: false
 })
 export const mutations = {
-  changeSidebar(state) {
-    state.sidebar = !state.sidebar
+  changeSidebar(state, value) {
+    state.sidebar = value === 'reset' ? false : !state.sidebar
   }
 }
 export const getters = {
@@ -12,7 +12,7 @@ export const getters = {
   }
 }
 export const actions = {
-  async toggleSidebar({ commit }) {
-    await commit('changeSidebar')
+  async toggleSidebar({ commit }, value = '') {
+    await commit('changeSidebar', value)
   }
 }
