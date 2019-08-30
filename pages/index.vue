@@ -1,6 +1,6 @@
 <template>
-  <div class="page-wrapper h-full">
-    <div class="container flex flex-col h-full">
+  <div class="page-wrapper">
+    <div class="container flex flex-col">
       <h1 class="name flex flex-col md:flex-row text-4xl font-bold">
         <span class="mx-1">Victory</span>
         <span class="mx-1">Garuba</span>
@@ -35,6 +35,7 @@ export default {
   .container {
     margin: 0 auto;
     display: flex;
+    min-height: 90vh;
     justify-content: center;
     align-items: center;
     text-align: center;

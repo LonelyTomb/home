@@ -75,7 +75,7 @@ export default {
   ],
   webfontloader: {
     google: {
-      families: ['Playfair Display:400,700']
+      families: ['Playfair Display:400,700', 'Nunito:700']
     }
   },
   purgeCSS: {},

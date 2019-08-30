@@ -4,14 +4,14 @@
       :mobile="true"
       class="w-1/2 sm:w-1/3 md:w-1/6 h-full bg-dark md:hidden z-50 fixed"
     ></MobileSidebar>
-    <div class="wrapper h-full">
+    <div class="wrapper min-h-full">
       <MobileHeader class="md:hidden fixed w-full z-30"></MobileHeader>
-      <div class="flex flex-row h-screen">
+      <div class="flex flex-row min-h-full">
         <Sidebar
           class="w-1/2 sm:w-1/3 md:w-1/6 h-full bg-dark hidden md:flex"
         ></Sidebar>
         <main
-          class="w-full sm:w-2/3 md:w-5/6 h-full right-0 absolute p-3 pt-6 h-full"
+          class="w-full sm:w-2/3 md:w-5/6 h-auto min-h-screen right-0 absolute p-3 pt-6"
         >
           <nuxt />
         </main>
