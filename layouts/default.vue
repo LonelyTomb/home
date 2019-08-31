@@ -11,7 +11,7 @@
           class="w-1/2 sm:w-1/3 md:w-1/6 h-full bg-dark hidden md:flex"
         ></Sidebar>
         <main
-          class="w-full sm:w-2/3 md:w-5/6 h-auto min-h-screen right-0 absolute p-3 pt-6"
+          class="w-full md:w-5/6 h-auto min-h-screen right-0 absolute p-10 pt-6 md:p-3"
         >
           <nuxt />
         </main>
