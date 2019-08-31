@@ -1,36 +1,36 @@
 <template>
   <div class="page-wrapper h-full">
     <page-title :image="image">About Me.</page-title>
-    <div class="content mt-3">
-      <h3 class="job-title text-2xl text-white font-sans">
+    <div class="content mt-3 pl-3">
+      <h3 class="job-title text-2xl text-white font-sans pl-3">
         Full Stack Web Developer
       </h3>
-      <div class="content-description">
-        <p class="mt-3 text-white">
+      <div class="content-description flex flex-col md:flex-row justify-around">
+        <p class="mt-3 text-white w-full md:w-2/3 px-6 py-3">
           Hello, I'm a Full Stack Web Developer. I'm always ready to learn
           something new everyday. Challenges? bring 'em on
         </p>
-      </div>
-      <div class="personal-info mt-3 text-white">
-        <h3 class="content-title text-2xl mb-3 font-sans">
-          Personal Information
-        </h3>
-        <div class="px-3 info-description">
-          <p class="mb-3"><span>Name</span> : Victory Garuba</p>
-          <p class="mb-3"><span>Residence</span> : Lagos, Nigeria</p>
-          <p class="mb-3"><span>Email</span> : garubav@gmail.com</p>
-          <p class="mb-3"><span>Phone</span> : (+234) 818 365 9972</p>
-          <p class="mb-3"><span>Freelance</span> : Available</p>
+        <div class="personal-info mt-3 text-white w-full md:w-1/3">
+          <h3 class="content-title text-2xl mb-3 font-sans">
+            Personal Information
+          </h3>
+          <div class="px-3 info-description">
+            <p class="mb-3"><span>Name</span> : Victory Garuba</p>
+            <p class="mb-3"><span>Residence</span> : Lagos, Nigeria</p>
+            <p class="mb-3"><span>Email</span> : garubav@gmail.com</p>
+            <p class="mb-3"><span>Phone</span> : (+234) 818 365 9972</p>
+            <p class="mb-3"><span>Freelance</span> : Available</p>
+          </div>
+          <div class="download-resume mt-6 mb-6">
+            <a
+              class="border-primary border-2 p-3 text-white hover:text-secondary hover:bg-dark"
+              href="https://drive.google.com/open?id=1buyYf4X0NSBUx_5o3rCsQWYV9wctVzTM"
+              target="_blank"
+            >
+              Download Resume
+            </a>
+          </div>
         </div>
-      </div>
-      <div class="download-resume mt-6 mb-6">
-        <a
-          class="border-primary border-2 p-3 text-white hover:text-secondary hover:bg-dark"
-          href="https://drive.google.com/open?id=1buyYf4X0NSBUx_5o3rCsQWYV9wctVzTM"
-          target="_blank"
-        >
-          Download Resume
-        </a>
       </div>
       <div class="services mt-10 uppercase font-bold pt-6">
         <title-bar>
