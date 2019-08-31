@@ -1,11 +1,6 @@
 <template>
   <div class="page-wrapper h-full">
-    <div
-      class="title flex flex-row w-full justify-between pt-6 pb-3 px-3 font-bold"
-    >
-      <h2 class="text-4xl text-primary font-sans">About Me.</h2>
-      <img src="/svg/user.svg" alt="me" class="w-6 filter-blue" />
-    </div>
+    <page-title :image="image">About Me.</page-title>
     <div class="content mt-3">
       <h3 class="job-title text-2xl text-white font-sans">
         Full Stack Web Developer
@@ -38,13 +33,9 @@
         </a>
       </div>
       <div class="services mt-10 uppercase font-bold pt-6">
-        <div class="wrapper flex flex-row justify-center">
-          <h3
-            class="title font-sans text-center text-white text-2xl border-primary border-b-2 px-3 relative mb-6"
-          >
-            Services
-          </h3>
-        </div>
+        <title-bar>
+          Services
+        </title-bar>
         <div class="services-grid flex flex-row text-white px-6 py-3 flex-wrap">
           <div
             class="flex flex-col justify-around mb-10 px-3 w-full md:w-1/2 lg:w-1/4 items-center"
@@ -117,7 +108,7 @@
             />
             <div>
               <p class="skill-title text-center font-sans mb-3 px-3">
-                DevOps
+                Database Management
               </p>
               <div
                 class="front text-center flex flex-row flex-wrap justify-center"
@@ -174,8 +165,17 @@
 import { mapActions } from 'vuex'
 export default {
   name: 'About',
+  components: {
+    'title-bar': () => ({
+      component: import('~/components/TitleBar')
+    }),
+    'page-title': () => ({
+      component: import('~/components/PageTitle')
+    })
+  },
   data() {
     return {
+      image: '/svg/user.svg',
       skills: {
         frontend: [
           {
@@ -288,32 +288,6 @@ export default {
     }
   }
   .services {
-    .title {
-      &:before,
-      &:after {
-        position: absolute;
-        width: 3px;
-        height: 4px;
-        background: {
-          color: #00a3e1;
-        }
-        bottom: 0;
-        content: '';
-      }
-      &:before {
-        position: absolute;
-        width: 3px;
-        height: 4px;
-        background: {
-          color: #00a3e1;
-        }
-        bottom: 0;
-        left: 0;
-      }
-      &:after {
-        right: 0;
-      }
-    }
     .services-grid {
       .skill-title {
       }
