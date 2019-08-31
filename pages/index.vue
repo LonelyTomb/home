@@ -1,6 +1,6 @@
 <template>
   <div class="page-wrapper">
-    <div class="container flex flex-col">
+    <div class="container flex flex-col text-white">
       <h1 class="name flex flex-col md:flex-row text-4xl font-bold">
         <span class="mx-1">Victory</span>
         <span class="mx-1">Garuba</span>
