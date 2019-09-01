@@ -1,47 +1,45 @@
 <template>
-  <div class="page-wrapper">
-    <div class="page-wrapper h-full">
-      <page-title :image="image">Resume.</page-title>
-      <div class="content">
-        <div class="experiences">
-          <title-bar class="mt-10">Experience</title-bar>
-          <div
-            class="experience-grid px-3 flex flex-col lg:flex-row flex-wrap ml-1 md:ml-10"
+  <div class="page-wrapper h-full">
+    <page-title :image="image">Resume.</page-title>
+    <div class="content">
+      <div class="experiences">
+        <title-bar class="mt-10">Experience</title-bar>
+        <div
+          class="experience-grid px-3 flex flex-col lg:flex-row flex-wrap ml-1 md:ml-10"
+        >
+          <experience
+            v-for="(experience, index) in experiences"
+            :key="`experience-${index}`"
+            :from="experience.from"
+            :to="experience.to"
+            class="w-full lg:w-1/2 mb-10 p-1"
           >
-            <experience
-              v-for="(experience, index) in experiences"
-              :key="`experience-${index}`"
-              :from="experience.from"
-              :to="experience.to"
-              class="w-full lg:w-1/2 mb-10 p-1"
-            >
-              <template #title>{{ experience.title }}</template>
-              <template #location>{{ experience.location }}</template>
-              <template #description>
-                {{ experience.description }}
-              </template>
-            </experience>
-          </div>
+            <template #title>{{ experience.title }}</template>
+            <template #location>{{ experience.location }}</template>
+            <template #description>
+              {{ experience.description }}
+            </template>
+          </experience>
         </div>
-        <div class="education mt-10">
-          <title-bar class="mt-10">Education</title-bar>
-          <div
-            class="experience-grid px-3 flex flex-col lg:flex-row flex-wrap ml-1 md:ml-10"
+      </div>
+      <div class="education mt-10">
+        <title-bar class="mt-10">Education</title-bar>
+        <div
+          class="experience-grid px-3 flex flex-col lg:flex-row flex-wrap ml-1 md:ml-10"
+        >
+          <experience
+            v-for="(education, index) in educations"
+            :key="`education-${index}`"
+            :from="education.from"
+            :to="education.to"
+            class="w-full lg:w-1/2 mb-10 p-1"
           >
-            <experience
-              v-for="(education, index) in educations"
-              :key="`education-${index}`"
-              :from="education.from"
-              :to="education.to"
-              class="w-full lg:w-1/2 mb-10 p-1"
-            >
-              <template #title>{{ education.title }}</template>
-              <template #location>{{ education.location }}</template>
-              <template #description>
-                {{ education.description }}
-              </template>
-            </experience>
-          </div>
+            <template #title>{{ education.title }}</template>
+            <template #location>{{ education.location }}</template>
+            <template #description>
+              {{ education.description }}
+            </template>
+          </experience>
         </div>
       </div>
     </div>

@@ -1,11 +1,26 @@
 <template>
-  <div class="page-wrapper"></div>
+  <div class="page-wrapper h-full">
+    <page-title :image="image">Portfolio.</page-title>
+  </div>
 </template>
 
 <script>
 export default {
-  name: 'Portfolio'
+  name: 'Portfolio',
+  components: {
+    // 'title-bar': () => ({
+    //   component: import('~/components/TitleBar')
+    // }),
+    'page-title': () => ({
+      component: import('~/components/PageTitle')
+    })
+  },
+  data() {
+    return {
+      image: '/svg/suitcase.svg'
+    }
+  }
 }
 </script>
 
-<style scoped></style>
+<style scoped lang="scss"></style>

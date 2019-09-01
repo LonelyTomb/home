@@ -1,5 +1,5 @@
 <template>
-  <Footer class="p-3">
+  <Footer class="p-3 mt-10">
     <div class="social-icons flex flex-row justify-center mb-3">
       <a href="https://www.twitter.com/lonelytomb">
         <img
