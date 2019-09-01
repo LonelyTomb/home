@@ -6,7 +6,7 @@
       <h5 class="uppercase text-sm text-primary font-semibold">
         <slot name="location"></slot>
       </h5>
-      <div class="description py-3">
+      <div class="description py-3 w-4/5">
         <p>
           <slot name="description"></slot>
         </p>
