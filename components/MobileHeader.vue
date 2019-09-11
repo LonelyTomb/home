@@ -30,6 +30,7 @@ export default {
 header {
   .menu-bar {
     filter: invert(1);
+    cursor: pointer;
   }
 }
 </style>

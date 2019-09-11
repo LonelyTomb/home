@@ -8,9 +8,6 @@
 export default {
   name: 'Portfolio',
   components: {
-    // 'title-bar': () => ({
-    //   component: import('~/components/TitleBar')
-    // }),
     'page-title': () => ({
       component: import('~/components/PageTitle')
     })

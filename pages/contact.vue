@@ -1,13 +1,135 @@
 <template>
-  <div class="page-wrapper">
-    <p>test</p>
+  <div class="page-wrapper h-full">
+    <page-title :image="image">Contact Me.</page-title>
+    <div class="content mt-3 pl-3">
+      <title-bar class="mt-10"> Let's Talk</title-bar>
+      <div class="contact-form mt-6 w-full lg:w-2/3 mx-auto">
+        <div class="flex flex-col lg:flex-row">
+          <div class="relative mb-10 w-full lg:w-1/2">
+            <input
+              id="name"
+              v-model="user.name"
+              type="text"
+              class="w-full bg-transparent text-white px-3 py-1"
+            />
+            <label for="name" class="absolute left-0 text-white bottom-1"
+              >Name</label
+            >
+          </div>
+          <div class="relative mb-10 lg:ml-6 w-full lg:w-1/2">
+            <input
+              id="email"
+              v-model="user.email"
+              type="text"
+              class="w-full bg-transparent text-white px-3 py-1"
+            />
+            <label for="email" class="absolute left-0 text-white bottom-1"
+              >Email</label
+            >
+          </div>
+        </div>
+        <div class="mt-6 w-full relative">
+          <textarea
+            id="message"
+            v-model="user.message"
+            name="message"
+            cols="30"
+            rows="5"
+            class="w-full bg-transparent text-white px-3 py-1"
+          ></textarea>
+          <label for="message" class="absolute left-0 text-white top-0"
+            >How can I help you?</label
+          >
+        </div>
+        <div class="flex justify-center mt-6">
+          <button
+            class="border-2 border-primary px-6 py-1 text-primary relative"
+          >
+            SEND MESSAGE
+          </button>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
+import { mapActions } from 'vuex'
+
 export default {
-  name: 'Contact'
+  name: 'Contact',
+  components: {
+    'title-bar': () => ({
+      component: import('~/components/TitleBar')
+    }),
+    'page-title': () => ({
+      component: import('~/components/PageTitle')
+    })
+  },
+  data() {
+    return {
+      image: '/svg/envelope.svg',
+      user: {
+        name: '',
+        email: '',
+        message: ''
+      }
+    }
+  },
+  mounted() {
+    this.toggleSidebar('reset')
+  },
+  methods: {
+    ...mapActions({ toggleSidebar: 'sidebar/toggleSidebar' })
+  }
 }
 </script>
 
-<style scoped></style>
+<style scoped lang="scss">
+.contact-form {
+  input,
+  textarea {
+    border: 2px solid #999;
+    transition: all 0.5s ease;
+    & + label {
+      left: 10px;
+      bottom: 7px;
+      transition: all 0.2s ease;
+      cursor: text;
+    }
+    &:focus {
+      border: {
+        color: #fff;
+      }
+    }
+    &:focus + label {
+      transform: translateY(-30px);
+    }
+  }
+  button {
+    transition: all 0.3s ease;
+    &:hover {
+      color: #000;
+    }
+    &:hover:after {
+      opacity: 1;
+      left: 0;
+      width: 100%;
+      background: {
+        color: #00a3e1;
+      }
+    }
+    &:after {
+      position: absolute;
+      content: '';
+      width: 30%;
+      height: 100%;
+      top: 0;
+      left: 35%;
+      transition: all 0.3s ease;
+      z-index: -1;
+      opacity: 0;
+    }
+  }
+}
+</style>
