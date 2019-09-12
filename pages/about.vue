@@ -45,7 +45,7 @@
               alt="front end developer image"
               class="mb-3 w-4/5"
             />
-            <div>
+            <div class="wrapper">
               <p class="skill-title text-center font-sans mb-3 px-3">
                 Front End Development
               </p>
@@ -77,7 +77,7 @@
               alt="Back end developer image"
               class="mb-3 w-4/5"
             />
-            <div>
+            <div class="wrapper">
               <p class="skill-title text-center font-sans mb-3 px-3">
                 Back End Development
               </p>
@@ -106,7 +106,7 @@
               alt="database management image"
               class="mb-3 w-4/5"
             />
-            <div>
+            <div class="wrapper">
               <p class="skill-title text-center font-sans mb-3 px-3">
                 Database Management
               </p>
@@ -134,7 +134,7 @@
             class="flex flex-col justify-around mb-6 px-3 w-full md:w-1/2 lg:w-1/4 items-center"
           >
             <img src="/png/devops.png" alt="Devops image" class="mb-3 w-4/5" />
-            <div>
+            <div class="wrapper">
               <p class="skill-title text-center font-sans mb-3 px-3">
                 DevOps
               </p>
