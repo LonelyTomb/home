@@ -1,3 +1,5 @@
+import dotenv from 'dotenv'
+dotenv.config()
 export default {
   mode: 'universal',
   /*
@@ -44,6 +46,15 @@ export default {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     [
+      '@nuxtjs/google-tag-manager',
+      {
+        id: process.env.GTM_TAG,
+        layer: 'dataLayer',
+        pageTracking: false,
+        dev: true // set to false to disable in dev mode
+      }
+    ],
+    [
       '@nuxtjs/pwa',
       {
         manifest: {
@@ -86,7 +97,8 @@ export default {
       }
     ],
     'nuxt-webfontloader',
-    'nuxt-purgecss'
+    'nuxt-purgecss',
+    '@nuxtjs/sitemap'
   ],
   webfontloader: {
     google: {
@@ -98,7 +110,17 @@ export default {
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options
    */
-  axios: {},
+  axios: {
+    baseURL: '/'
+  },
+  sitemap: {
+    hostname: process.env.BASE_URL,
+    path: '/sitemap.xml',
+    gzip: true,
+    cacheTime: 1000 * 60 * 15,
+    exclude: ['/secret', '/admin/**'],
+    routes: ['/', '/resume', '/about', '/portfolio', '/contact']
+  },
   /*
    ** Build configuration
    */
@@ -106,7 +128,18 @@ export default {
     /*
      ** You can extend webpack config here
      */
+    watch: ['api'],
     extractCSS: true,
-    extend(config, ctx) {}
+    extend(config, ctx) {
+      // Run ESLint on save
+      if (ctx.isDev && ctx.isClient) {
+        config.module.rules.push({
+          enforce: 'pre',
+          test: /\.(js|vue)$/,
+          loader: 'eslint-loader',
+          exclude: /(node_modules)/
+        })
+      }
+    }
   }
 }

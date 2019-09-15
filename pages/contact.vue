@@ -3,7 +3,7 @@
     <page-title :image="image">Contact Me.</page-title>
     <div class="content mt-3 pl-3">
       <title-bar class="mt-10"> Let's Talk</title-bar>
-      <div class="contact-form mt-6 w-full lg:w-2/3 mx-auto">
+      <div class="contact-form mt-6 w-full lg:w-2/3 mx-auto mb-10">
         <div class="flex flex-col lg:flex-row">
           <div class="relative mb-10 w-full lg:w-1/2">
             <input
@@ -47,6 +47,26 @@
           >
             SEND MESSAGE
           </button>
+        </div>
+      </div>
+      <div
+        class="contact-details flex flex-col lg:flex-row items-center mt-10 pt-6"
+      >
+        <div class="w-full flex flex-col justify-center items-center mb-6">
+          <img src="/svg/paper-plane.svg" alt="location" class="w-1/6 mb-3" />
+          <p class="text-white">garubav@gmail.com</p>
+        </div>
+        <div class="w-full flex flex-col justify-center items-center mb-6">
+          <img src="/svg/placeholder.svg" alt="location" class="w-1/6 mb-3" />
+          <p class="text-white">Lagos, Nigeria</p>
+        </div>
+        <div class="w-full flex flex-col justify-center items-center mb-6">
+          <img
+            src="/svg/telephone-handle-silhouette.svg"
+            alt="location"
+            class="w-1/6 mb-3"
+          />
+          <p class="text-white">(+234) 818 365 9972</p>
         </div>
       </div>
     </div>
