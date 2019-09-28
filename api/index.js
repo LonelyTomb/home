@@ -47,7 +47,7 @@ const sendMail = async (params) => {
   }
 }
 
-app.post('/contact/', async (req, res, next) => {
+app.post('/contact', async (req, res, next) => {
   const attributes = ['name', 'email', 'message']
   const sanitizedAttributes = attributes.map((n) =>
     validateAndSanitize(n, req.body[n])
