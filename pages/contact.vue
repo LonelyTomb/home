@@ -11,6 +11,7 @@
               v-model="user.name"
               type="text"
               class="w-full bg-transparent text-white px-3 py-1"
+              :class="{ filled: user.name !== '' }"
             />
             <label for="name" class="absolute left-0 text-white bottom-1"
               >Name</label
@@ -22,6 +23,7 @@
               v-model="user.email"
               type="text"
               class="w-full bg-transparent text-white px-3 py-1"
+              :class="{ filled: user.email !== '' }"
             />
             <label for="email" class="absolute left-0 text-white bottom-1"
               >Email</label
@@ -36,6 +38,7 @@
             cols="30"
             rows="5"
             class="w-full bg-transparent text-white px-3 py-1"
+            :class="{ filled: user.message !== '' }"
           ></textarea>
           <label for="message" class="absolute left-0 text-white top-0"
             >How can I help you?</label
@@ -44,6 +47,7 @@
         <div class="flex justify-center mt-6">
           <button
             class="border-2 border-primary px-6 py-1 text-primary relative"
+            @click.prevent="sendContactMail()"
           >
             SEND MESSAGE
           </button>
@@ -100,7 +104,29 @@ export default {
     this.toggleSidebar('reset')
   },
   methods: {
-    ...mapActions({ toggleSidebar: 'sidebar/toggleSidebar' })
+    ...mapActions({
+      toggleSidebar: 'sidebar/toggleSidebar',
+      showToast: 'toast/showToast'
+    }),
+    async sendContactMail() {
+      const resetUser = {
+        name: '',
+        email: '',
+        message: ''
+      }
+      try {
+        this.showToast('Mail Sending....')
+        await this.$axios.$post('/api/contact', this.user)
+        this.user = resetUser
+        this.showToast('Mail Sent.')
+        setTimeout(() => {
+          this.hideToast()
+        }, 3000)
+      } catch (e) {
+        this.showToast('Unable to Send Mail')
+        // console.log(`Unable to Complete: ${e}`)
+      }
+    }
   }
 }
 </script>
@@ -123,6 +149,9 @@ export default {
       }
     }
     &:focus + label {
+      transform: translateY(-30px);
+    }
+    &.filled + label {
       transform: translateY(-30px);
     }
   }
