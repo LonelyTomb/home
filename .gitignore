@@ -88,8 +88,7 @@ sw.*
 .DS_Store
 
 #My Projects
-/labs
-labs
+/lab
 
 cloudinary.json
 
