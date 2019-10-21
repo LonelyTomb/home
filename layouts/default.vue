@@ -1,14 +1,14 @@
 <template>
-  <div class="page mx-auto relative min-h-screen">
+  <div class="page mx-auto relative min-h-screen overflow-y-auto scrollbar">
     <MobileSidebar
       :mobile="true"
-      class="w-1/2 sm:w-1/3 md:w-1/6 h-full bg-dark md:hidden z-50 fixed"
+      class="w-1/2 sm:w-1/3 md:w-1/6 h-full bg-dark md:hidden z-50 fixed scrollbar"
     ></MobileSidebar>
     <div class="wrapper min-h-full">
       <MobileHeader class="md:hidden fixed w-full z-30"></MobileHeader>
-      <div class="flex flex-row min-h-full">
+      <div class="flex flex-row min-h-full scrollbar">
         <Sidebar
-          class="w-1/2 sm:w-1/3 md:w-1/6 h-full bg-dark hidden md:flex"
+          class="w-1/2 sm:w-1/3 md:w-1/6 h-full bg-dark hidden md:flex scrollbar"
         ></Sidebar>
         <main
           class="w-full md:w-5/6 h-auto min-h-screen right-0 absolute p-10 pt-6 md:p-3 overflow-hidden"
@@ -40,6 +40,30 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+.scrollbar {
+  &::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: transparent;
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar {
+    width: 10px;
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-image: -webkit-gradient(
+      linear,
+      left bottom,
+      left top,
+      color-stop(0.44, rgb(122, 153, 217)),
+      color-stop(0.72, rgb(73, 125, 189)),
+      color-stop(0.86, rgb(28, 58, 148))
+    );
+  }
+}
 .page-enter-active {
   animation: rotateSlideInFromRight 0.8s ease-out;
 }

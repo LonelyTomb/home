@@ -1,6 +1,6 @@
 <template>
   <aside
-    class="sidebar fixed left-0 overflow-scroll md:overflow-auto flex flex-col justify-between"
+    class="sidebar fixed left-0 overflow-y-scroll md:overflow-auto flex flex-col justify-between"
     :class="{ 'hide-sidebar': getSidebarState === false && mobile === true }"
   >
     <div class="wrapper">
