@@ -1,0 +1,15 @@
+version: "3"
+services:
+  web:
+    build: .
+    environment:
+      - NUXT_HOST=${NUXT_HOST}
+      - NUXT_PORT=${NUXT_PORT}
+      - NUXT_ENV=${NUXT_ENV}
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+    ports:
+      - "5000:${NUXT_PORT}"
+    command: yarn dev
+

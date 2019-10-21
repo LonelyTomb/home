@@ -1,6 +1,14 @@
 FROM node:lts-alpine
 
-WORKDIR /app
+ARG NUXT_HOST
+ARG NUXT_PORT
+ARG NUXT_ENV
+
+ENV NUXT_HOST $NUXT_HOST
+ENV NUXT_PORT $NUXT_PORT
+ENV NUXT_ENV $NUXT_ENV
+
+WORKDIR /usr/src/app
 
 COPY package*.json ./
 
@@ -10,10 +18,6 @@ COPY . .
 
 RUN yarn build
 
-EXPOSE 5000
-
-ENV NUXT_HOST=0.0.0.0
-
-ENV NUXT_PORT=5000
+EXPOSE NUXT_PORT
 
 CMD ["yarn" , "start"]
