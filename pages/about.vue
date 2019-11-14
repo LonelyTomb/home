@@ -1,3 +1,4 @@
+<!--suppress HtmlUnknownTarget -->
 <template>
   <div class="page-wrapper h-full">
     <page-title :image="image">About Me.</page-title>
@@ -36,121 +37,139 @@
         <title-bar>
           Services
         </title-bar>
-        <div class="services-grid flex flex-row text-white px-6 py-3 flex-wrap">
-          <div
-            class="flex flex-col justify-around mb-10 px-3 w-full md:w-1/2 lg:w-1/4 items-center"
-          >
-            <img
-              src="/png/front-end.png"
-              alt="front end developer image"
-              class="mb-3 w-4/5"
-            />
-            <div class="wrapper">
-              <p class="skill-title text-center font-sans mb-3 px-3">
-                Front End Development
-              </p>
-              <div
-                class="front text-center flex flex-row flex-wrap justify-center"
-              >
+        <div class="services-grid flex flex-row text-white py-3 flex-wrap">
+          <div class="p-1 w-full md:w-1/2 lg:w-1/4">
+            <div
+              class="flex flex-col justify-around mb-10 items-center border-primary border-2"
+            >
+              <img
+                src="/png/front-end.png"
+                alt="front end developer image"
+                class="mb-3 w-4/5"
+              />
+              <div class="wrapper flex flex-col px-6 py-3">
+                <p class="skill-title text-center font-sans mb-3 px-3">
+                  Front End Development
+                </p>
                 <div
-                  v-for="(item, index) in skills.frontend"
-                  :key="`front-${index}`"
+                  class="front text-center flex flex-row flex-wrap justify-center"
                 >
-                  <a :href="item.url" target="_blank">
-                    {{ item.name }}
-                  </a>
-                  <span
-                    v-if="index + 1 !== skills.frontend.length"
-                    class="mr-1"
+                  <div
+                    v-for="(item, index) in skills.frontend"
+                    :key="`front-${index}`"
                   >
-                    ,
-                  </span>
+                    <a :href="item.url" target="_blank">
+                      {{ item.name }}
+                    </a>
+                    <span
+                      v-if="index + 1 !== skills.frontend.length"
+                      class="mr-1"
+                    >
+                      ,
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-          <div
-            class="flex flex-col justify-around mb-10 px-3 w-full md:w-1/2 lg:w-1/4 items-center"
-          >
-            <img
-              src="/png/back-end-developer.jpg"
-              alt="Back end developer image"
-              class="mb-3 w-4/5"
-            />
-            <div class="wrapper">
-              <p class="skill-title text-center font-sans mb-3 px-3">
-                Back End Development
-              </p>
-              <div
-                class="front text-center flex flex-row flex-wrap justify-center"
-              >
+          <div class="p-1 w-full md:w-1/2 lg:w-1/4">
+            <div
+              class="flex flex-col justify-around mb-10 items-center border-primary border-2 pt-3"
+            >
+              <img
+                src="/png/back-end-developer.jpg"
+                alt="Back end developer image"
+                class="mb-3 w-4/5"
+              />
+              <div class="wrapper flex flex-col px-6 py-3">
+                <p class="skill-title text-center font-sans mb-3 px-3">
+                  Back End Development
+                </p>
                 <div
-                  v-for="(item, index) in skills.backend"
-                  :key="`back-${index}`"
+                  class="front text-center flex flex-row flex-wrap justify-center"
                 >
-                  <a :href="item.url" target="_blank">
-                    {{ item.name }}
-                  </a>
-                  <span v-if="index + 1 !== skills.backend.length" class="mr-1">
-                    ,
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            class="flex flex-col justify-around mb-10 px-3 w-full md:w-1/2 lg:w-1/4 items-center"
-          >
-            <img
-              src="/png/database.png"
-              alt="database management image"
-              class="mb-3 w-4/5"
-            />
-            <div class="wrapper">
-              <p class="skill-title text-center font-sans mb-3 px-3">
-                Database Management
-              </p>
-              <div
-                class="front text-center flex flex-row flex-wrap justify-center"
-              >
-                <div
-                  v-for="(item, index) in skills.database"
-                  :key="`database-${index}`"
-                >
-                  <a :href="item.url" target="_blank">
-                    {{ item.name }}
-                  </a>
-                  <span
-                    v-if="index + 1 !== skills.database.length"
-                    class="mr-1"
+                  <div
+                    v-for="(item, index) in skills.backend"
+                    :key="`back-${index}`"
                   >
-                    ,
-                  </span>
+                    <a :href="item.url" target="_blank">
+                      {{ item.name }}
+                    </a>
+                    <span
+                      v-if="index + 1 !== skills.backend.length"
+                      class="mr-1"
+                    >
+                      ,
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-          <div
-            class="flex flex-col justify-around mb-6 px-3 w-full md:w-1/2 lg:w-1/4 items-center"
-          >
-            <img src="/png/devops.png" alt="Devops image" class="mb-3 w-4/5" />
-            <div class="wrapper">
-              <p class="skill-title text-center font-sans mb-3 px-3">
-                DevOps
-              </p>
-              <div
-                class="front text-center flex flex-row flex-wrap justify-center"
-              >
+          <div class="p-1 w-full md:w-1/2 lg:w-1/4">
+            <div
+              class="flex flex-col justify-around mb-10 items-center border-primary border-2 pt-3"
+            >
+              <img
+                src="/png/database.png"
+                alt="database management image"
+                class="mb-3 w-4/5"
+              />
+              <div class="wrapper flex flex-col px-6 py-3">
+                <p class="skill-title text-center font-sans mb-3 px-3">
+                  Database Management
+                </p>
                 <div
-                  v-for="(item, index) in skills.devops"
-                  :key="`devops-${index}`"
+                  class="front text-center flex flex-row flex-wrap justify-center"
                 >
-                  <a :href="item.url" target="_blank">
-                    {{ item.name }}
-                  </a>
-                  <span v-if="index + 1 !== skills.devops.length" class="mr-1">
-                    ,
-                  </span>
+                  <div
+                    v-for="(item, index) in skills.database"
+                    :key="`database-${index}`"
+                  >
+                    <a :href="item.url" target="_blank">
+                      {{ item.name }}
+                    </a>
+                    <span
+                      v-if="index + 1 !== skills.database.length"
+                      class="mr-1"
+                    >
+                      ,
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="p-1 w-full md:w-1/2 lg:w-1/4">
+            <div
+              class="flex flex-col justify-around mb-6 items-center border-primary border-2 pt-3"
+            >
+              <img
+                src="/png/devops.png"
+                alt="Devops image"
+                class="mb-3 w-4/5"
+              />
+              <div class="wrapper flex flex-col px-6 py-3">
+                <p class="skill-title text-center font-sans mb-3 px-3">
+                  DevOps
+                </p>
+                <div
+                  class="front text-center flex flex-row flex-wrap justify-center"
+                >
+                  <div
+                    v-for="(item, index) in skills.devops"
+                    :key="`devops-${index}`"
+                  >
+                    <a :href="item.url" target="_blank">
+                      {{ item.name }}
+                    </a>
+                    <span
+                      v-if="index + 1 !== skills.devops.length"
+                      class="mr-1"
+                    >
+                      ,
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -289,6 +308,14 @@ export default {
   }
   .services {
     .services-grid {
+      & > div > div {
+        height: 100%;
+      }
+      .wrapper {
+        background: {
+          color: rgba(#000, 0.3);
+        }
+      }
       .skill-title {
       }
       .front {
