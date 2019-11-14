@@ -38,17 +38,19 @@
           Services
         </title-bar>
         <div class="services-grid flex flex-row text-white py-3 flex-wrap">
-          <div class="p-1 w-full md:w-1/2 lg:w-1/4">
+          <div class="p-1 w-full md:w-1/2">
             <div
-              class="flex flex-col justify-around mb-10 items-center border-primary border-2"
+              class="flex flex-col md:flex-row justify-between mb-10 items-center border-primary border-2"
             >
               <img
                 src="/png/front-end.png"
                 alt="front end developer image"
-                class="mb-3 w-4/5"
+                class="mb-3 w-4/5 md:w-1/2"
               />
-              <div class="wrapper flex flex-col px-6 py-3">
-                <p class="skill-title text-center font-sans mb-3 px-3">
+              <div
+                class="wrapper flex flex-col px-3 py-3 h-full md:w-1/2 justify-around"
+              >
+                <p class="skill-title text-center font-sans mb-3">
                   Front End Development
                 </p>
                 <div
@@ -72,17 +74,19 @@
               </div>
             </div>
           </div>
-          <div class="p-1 w-full md:w-1/2 lg:w-1/4">
+          <div class="p-1 w-full md:w-1/2">
             <div
-              class="flex flex-col justify-around mb-10 items-center border-primary border-2 pt-3"
+              class="flex flex-col md:flex-row justify-between mb-10 items-center border-primary border-2 "
             >
               <img
                 src="/png/back-end-developer.jpg"
                 alt="Back end developer image"
-                class="mb-3 w-4/5"
+                class="mb-3 w-4/5 md:w-1/2"
               />
-              <div class="wrapper flex flex-col px-6 py-3">
-                <p class="skill-title text-center font-sans mb-3 px-3">
+              <div
+                class="wrapper flex flex-col px-3 py-3 h-full md:w-1/2 justify-around"
+              >
+                <p class="skill-title text-center font-sans mb-3">
                   Back End Development
                 </p>
                 <div
@@ -106,17 +110,19 @@
               </div>
             </div>
           </div>
-          <div class="p-1 w-full md:w-1/2 lg:w-1/4">
+          <div class="p-1 w-full md:w-1/2">
             <div
-              class="flex flex-col justify-around mb-10 items-center border-primary border-2 pt-3"
+              class="flex flex-col md:flex-row justify-between mb-10 items-center border-primary border-2 "
             >
               <img
                 src="/png/database.png"
                 alt="database management image"
-                class="mb-3 w-4/5"
+                class="mb-3 w-4/5 md:w-1/2"
               />
-              <div class="wrapper flex flex-col px-6 py-3">
-                <p class="skill-title text-center font-sans mb-3 px-3">
+              <div
+                class="wrapper flex flex-col px-3 py-3 h-full md:w-1/2 justify-around"
+              >
+                <p class="skill-title text-center font-sans mb-3">
                   Database Management
                 </p>
                 <div
@@ -140,17 +146,19 @@
               </div>
             </div>
           </div>
-          <div class="p-1 w-full md:w-1/2 lg:w-1/4">
+          <div class="p-1 w-full md:w-1/2">
             <div
-              class="flex flex-col justify-around mb-6 items-center border-primary border-2 pt-3"
+              class="flex flex-col md:flex-row justify-between mb-6 items-center border-primary border-2 "
             >
               <img
                 src="/png/devops.png"
                 alt="Devops image"
-                class="mb-3 w-4/5"
+                class="mb-3 w-4/5 md:w-1/2"
               />
-              <div class="wrapper flex flex-col px-6 py-3">
-                <p class="skill-title text-center font-sans mb-3 px-3">
+              <div
+                class="wrapper flex flex-col px-3 py-3 h-full md:w-1/2 justify-around"
+              >
+                <p class="skill-title text-center font-sans mb-3">
                   DevOps
                 </p>
                 <div

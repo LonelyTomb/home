@@ -1,3 +1,4 @@
+<!--suppress HtmlUnknownTarget -->
 <template>
   <div class="page-wrapper h-full">
     <page-title :image="image">Contact Me.</page-title>
@@ -39,7 +40,7 @@
             rows="5"
             class="w-full bg-transparent text-white px-3 py-1"
             :class="{ filled: user.message !== '' }"
-          ></textarea>
+          />
           <label for="message" class="absolute left-0 text-white top-0"
             >How can I help you?</label
           >

@@ -1,3 +1,4 @@
+<!--suppress HtmlUnknownTarget -->
 <template>
   <div class="page-wrapper h-full">
     <page-title :image="image">Portfolio.</page-title>

@@ -1,3 +1,4 @@
+<!--suppress HtmlUnknownTarget -->
 <template>
   <div class="page-wrapper">
     <div class="container flex flex-col text-white">
