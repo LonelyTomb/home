@@ -38,9 +38,9 @@
           Services
         </title-bar>
         <div class="services-grid flex flex-row text-white py-3 flex-wrap">
-          <div class="p-1 w-full md:w-1/2">
+          <div class="p-3 w-full md:w-1/2">
             <div
-              class="flex flex-col md:flex-row justify-between mb-10 items-center border-primary border-2"
+              class="flex flex-col md:flex-row justify-between mb-10 items-center"
             >
               <img
                 src="/png/front-end.png"
@@ -74,9 +74,9 @@
               </div>
             </div>
           </div>
-          <div class="p-1 w-full md:w-1/2">
+          <div class="p-3 w-full md:w-1/2">
             <div
-              class="flex flex-col md:flex-row justify-between mb-10 items-center border-primary border-2 "
+              class="flex flex-col md:flex-row justify-between mb-10 items-center"
             >
               <img
                 src="/png/back-end-developer.jpg"
@@ -110,9 +110,9 @@
               </div>
             </div>
           </div>
-          <div class="p-1 w-full md:w-1/2">
+          <div class="p-3 w-full md:w-1/2">
             <div
-              class="flex flex-col md:flex-row justify-between mb-10 items-center border-primary border-2 "
+              class="flex flex-col md:flex-row justify-between mb-10 items-center"
             >
               <img
                 src="/png/database.png"
@@ -146,9 +146,9 @@
               </div>
             </div>
           </div>
-          <div class="p-1 w-full md:w-1/2">
+          <div class="p-3 w-full md:w-1/2">
             <div
-              class="flex flex-col md:flex-row justify-between mb-6 items-center border-primary border-2 "
+              class="flex flex-col md:flex-row justify-between mb-6 items-center"
             >
               <img
                 src="/png/devops.png"
@@ -318,6 +318,7 @@ export default {
     .services-grid {
       & > div > div {
         height: 100%;
+        box-shadow: 0 0 20px 1px rgba(#0f0f0f, 1);
       }
       .wrapper {
         background: {
