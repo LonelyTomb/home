@@ -1,7 +1,6 @@
 # lonelytomb
-
+[![Netlify Status](https://api.netlify.com/api/v1/badges/d2dbb379-ddcb-447f-890c-2e71f4038cc4/deploy-status)](https://app.netlify.com/sites/netwiq/deploys)
 > My Portfolio
-
 ## Build Setup
 
 ``` bash
