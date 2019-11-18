@@ -50,7 +50,7 @@ const sendMail = async (params) => {
   }
 }
 
-router.post('/contact', async (req, res, next) => {
+app.post('/contact', async (req, res, next) => {
   const attributes = ['name', 'email', 'message']
   const sanitizedAttributes = attributes.map((n) =>
     validateAndSanitize(n, req.body[n])
@@ -69,6 +69,11 @@ router.post('/contact', async (req, res, next) => {
   }
 })
 
-app.use('/.netlify/api', app) // path must route to lambda
-module.exports = app
+app.get('/test', (req, res, next) => {
+  res.status(200).json({
+    message: 'Testing for cloud'
+  })
+})
+// app.use('/.netlify/api', app) // path must route to lambda
+// module.exports = app
 module.exports.handler = serverless(app)
