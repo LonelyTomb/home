@@ -69,6 +69,6 @@ router.post('/contact', async (req, res, next) => {
   }
 })
 
-app.use('/.netlify/functions/server', app) // path must route to lambda
+app.use('/.netlify/api', app) // path must route to lambda
 module.exports = app
 module.exports.handler = serverless(app)
