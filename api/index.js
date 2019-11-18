@@ -5,8 +5,11 @@ import nodemailer from 'nodemailer'
 import transport from 'nodemailer-mailgun-transport'
 import bodyParser from 'body-parser'
 import dotenv from 'dotenv'
+import serverless from 'serverless-http'
+
 dotenv.config()
 const app = express()
+const router = express.Router()
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
 
@@ -47,7 +50,7 @@ const sendMail = async (params) => {
   }
 }
 
-app.post('/contact', async (req, res, next) => {
+router.post('/contact', async (req, res, next) => {
   const attributes = ['name', 'email', 'message']
   const sanitizedAttributes = attributes.map((n) =>
     validateAndSanitize(n, req.body[n])
@@ -66,7 +69,6 @@ app.post('/contact', async (req, res, next) => {
   }
 })
 
-export default {
-  path: '/api/',
-  handler: app
-}
+app.use('/.netlify/functions/server', app) // path must route to lambda
+module.exports = app
+module.exports.handler = serverless(app)

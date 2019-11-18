@@ -117,7 +117,7 @@ export default {
       }
       try {
         this.showToast('Mail Sending....')
-        await this.$axios.$post('/api/contact', this.user)
+        await this.$axios.$post('/.netlify/functions/server/contact', this.user)
         this.user = resetUser
         this.showToast('Mail Sent.')
         setTimeout(() => {

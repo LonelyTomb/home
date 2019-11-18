@@ -106,7 +106,6 @@ export default {
     }
   },
   purgeCSS: {},
-  serverMiddleware: ['~/api/index.js'],
   /*
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options
