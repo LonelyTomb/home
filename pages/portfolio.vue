@@ -18,6 +18,8 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex'
+
 export default {
   name: 'Portfolio',
   components: {
@@ -72,6 +74,12 @@ export default {
         }
       ]
     }
+  },
+  mounted() {
+    this.toggleSidebar('reset')
+  },
+  methods: {
+    ...mapActions({ toggleSidebar: 'sidebar/toggleSidebar' })
   }
 }
 </script>
