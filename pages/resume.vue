@@ -67,11 +67,26 @@ export default {
       experiences: [
         {
           title: 'Front End Engineer',
+          location: 'ACOMART',
+          description:
+            'Development of Video streaming platforms including afrocinema and afrostream',
+          from: '11/2019',
+          to: '07/2020'
+        },
+        {
+          title: 'Front End Engineer',
+          location: 'Sterling Bank',
+          description: 'In charge of creating onebank Web',
+          from: '11/2019',
+          to: '07/2020'
+        },
+        {
+          title: 'Front End Engineer',
           location: 'Fluidangle',
           description:
             'In charge of creating awesome user interfaces, conversions of ui/ux designs to actual code.',
           from: '07/2019',
-          to: 'Present'
+          to: '10/2019'
         },
         {
           title: 'Operations Support Services Engineer (WEB)',

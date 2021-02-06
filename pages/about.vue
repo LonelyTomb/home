@@ -8,7 +8,7 @@
       </h3>
       <div class="content-description flex flex-col md:flex-row justify-around">
         <p class="mt-3 text-white w-full md:w-2/3 px-6 py-3">
-          Hello, I'm a Full Stack Web Developer. I'm always ready to learn
+          Hello, I'm a Front-end Web Developer. I'm always ready to learn
           something new everyday. Challenges? bring 'em on
         </p>
         <div class="personal-info mt-3 text-white w-full md:w-1/3">
@@ -74,7 +74,7 @@
               </div>
             </div>
           </div>
-          <div class="p-3 w-full md:w-1/2">
+          <div v-if="false" class="p-3 w-full md:w-1/2">
             <div
               class="flex flex-col md:flex-row justify-between mb-10 items-center"
             >
@@ -110,7 +110,7 @@
               </div>
             </div>
           </div>
-          <div class="p-3 w-full md:w-1/2">
+          <div v-if="false" class="p-3 w-full md:w-1/2">
             <div
               class="flex flex-col md:flex-row justify-between mb-10 items-center"
             >
@@ -146,7 +146,7 @@
               </div>
             </div>
           </div>
-          <div class="p-3 w-full md:w-1/2">
+          <div v-if="false" class="p-3 w-full md:w-1/2">
             <div
               class="flex flex-col md:flex-row justify-between mb-6 items-center"
             >
@@ -220,6 +220,22 @@ export default {
           {
             name: 'Vue.js',
             url: 'http://www.stackshare.io/vue-js'
+          },
+          {
+            name: 'React',
+            url: 'http://www.stackshare.io/react'
+          },
+          {
+            name: 'Nuxt.js',
+            url: 'http://www.stackshare.io/nuxt'
+          },
+          {
+            name: 'Vuex',
+            url: 'http://www.stackshare.io/vuex'
+          },
+          {
+            name: 'Redux',
+            url: 'http://www.stackshare.io/react-redux'
           },
           {
             name: 'UIKit',
