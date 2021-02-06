@@ -182,31 +182,41 @@ module.exports = {
       last: '9999',
       none: '0'
     },
+    boxShadow: {
+      sm: '0 1px 2px 0 rgba(255,255,255, 0.05)',
+      DEFAULT:
+        '0 1px 3px 0 rgba(255,255,255, 0.1), 0 1px 2px 0 rgba(255, 255, 255, 0.06)',
+      md:
+        '0 4px 6px -1px rgba(255,255,255, 0.1), 0 2px 4px -1px rgba(255, 255, 255, 0.06)',
+      lg:
+        '0 10px 15px -3px rgba(255,255,255, 0.1), 0 4px 6px -2px rgba(255, 255, 255, 0.05)',
+      '2xl': '0 25px 50px -12px rgba(255, 255, 255, 0.25)'
+    },
     padding: (theme) => theme('spacing'),
     placeholderColor: (theme) => theme('colors'),
-    textColor: (theme) => theme('colors')
+    textColor: (theme) => theme('colors'),
+    width: (theme) => ({
+      auto: 'auto',
+      ...theme('spacing'),
+      '1/2': '50%',
+      '1/3': '33.333333%',
+      '2/3': '66.666667%',
+      '1/4': '25%',
+      '2/4': '50%',
+      '3/4': '75%',
+      '1/5': '20%',
+      '2/5': '40%',
+      '3/5': '60%',
+      '4/5': '80%',
+      '1/6': '16.666667%',
+      '2/6': '33.333333%',
+      '3/6': '50%',
+      '4/6': '66.666667%',
+      '5/6': '83.333333%',
+      full: '100%',
+      screen: '100vw'
+    })
   },
-  width: (theme) => ({
-    auto: 'auto',
-    ...theme('spacing'),
-    '1/2': '50%',
-    '1/3': '33.333333%',
-    '2/3': '66.666667%',
-    '1/4': '25%',
-    '2/4': '50%',
-    '3/4': '75%',
-    '1/5': '20%',
-    '2/5': '40%',
-    '3/5': '60%',
-    '4/5': '80%',
-    '1/6': '16.666667%',
-    '2/6': '33.333333%',
-    '3/6': '50%',
-    '4/6': '66.666667%',
-    '5/6': '83.333333%',
-    full: '100%',
-    screen: '100vw'
-  }),
   variants: {
     accessibility: ['responsive', 'focus'],
     alignContent: ['responsive'],
@@ -237,6 +247,9 @@ module.exports = {
     fontSmoothing: ['responsive'],
     fontStyle: ['responsive'],
     fontWeight: ['responsive', 'hover', 'focus'],
+    gridTemplateColumns: ['responsive'],
+    gridTemplateRows: ['responsive'],
+    gap: ['responsive'],
     height: ['responsive'],
     justifyContent: ['responsive'],
     letterSpacing: ['responsive'],
