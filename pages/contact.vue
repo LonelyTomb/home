@@ -10,9 +10,9 @@
             <input
               id="name"
               v-model="user.name"
+              :class="{ filled: user.name !== '' }"
               type="text"
               class="w-full bg-transparent text-white px-3 py-1"
-              :class="{ filled: user.name !== '' }"
             />
             <label for="name" class="absolute left-0 text-white bottom-1"
               >Name</label
@@ -22,9 +22,9 @@
             <input
               id="email"
               v-model="user.email"
+              :class="{ filled: user.email !== '' }"
               type="text"
               class="w-full bg-transparent text-white px-3 py-1"
-              :class="{ filled: user.email !== '' }"
             />
             <label for="email" class="absolute left-0 text-white bottom-1"
               >Email</label
@@ -35,11 +35,11 @@
           <textarea
             id="message"
             v-model="user.message"
+            :class="{ filled: user.message !== '' }"
             name="message"
             cols="30"
             rows="5"
             class="w-full bg-transparent text-white px-3 py-1"
-            :class="{ filled: user.message !== '' }"
           />
           <label for="message" class="absolute left-0 text-white top-0"
             >How can I help you?</label
