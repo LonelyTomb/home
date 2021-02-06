@@ -8,7 +8,7 @@
       </h1>
       <p class="description">
         <span>I am a</span>
-        <span class="profession"><b>Full Stack Web Developer</b></span>
+        <span class="profession"><b>Front-End Web Developer</b></span>
       </p>
     </div>
   </div>
