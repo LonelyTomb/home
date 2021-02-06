@@ -9,7 +9,7 @@ import serverless from 'serverless-http'
 
 dotenv.config()
 const app = express()
-const router = express.Router()
+// const router = express.Router()
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
 

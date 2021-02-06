@@ -1,7 +1,7 @@
 <template>
   <aside
-    class="sidebar fixed left-0 overflow-y-scroll md:overflow-auto flex flex-col justify-between"
     :class="{ 'hide-sidebar': getSidebarState === false && mobile === true }"
+    class="sidebar fixed left-0 overflow-y-scroll md:overflow-auto flex flex-col justify-between"
   >
     <div class="wrapper">
       <div class="image-part">
