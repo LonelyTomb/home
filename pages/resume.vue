@@ -71,7 +71,7 @@ export default {
           description:
             'Development of Video streaming platforms including afrocinema and afrostream',
           from: '11/2019',
-          to: '07/2020'
+          to: 'Present'
         },
         {
           title: 'Front End Engineer',
