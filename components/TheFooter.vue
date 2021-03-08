@@ -23,10 +23,10 @@
         />
       </a>
     </div>
-    <p class="text-center">
+    <p class="text-center text-white">
       {{ new Date().getUTCFullYear() }} &copy; Victory Garuba
     </p>
-    <p class="text-center">All Rights Reserved</p>
+    <p class="text-center text-white">All Rights Reserved</p>
   </Footer>
 </template>
 
