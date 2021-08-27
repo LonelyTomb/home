@@ -37,11 +37,11 @@
         <title-bar>
           Services
         </title-bar>
-        <div class="services-grid flex flex-row text-white py-3 flex-wrap">
+        <div
+          class="services-grid flex flex-row text-white py-3 flex-wrap justify-center"
+        >
           <div class="p-3 w-full md:w-1/2">
-            <div
-              class="flex flex-col md:flex-row justify-between mb-10 items-center"
-            >
+            <div class="flex flex-col justify-between mb-10 items-center">
               <img
                 src="/png/front-end.png"
                 alt="front end developer image"
