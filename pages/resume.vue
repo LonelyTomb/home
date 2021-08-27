@@ -67,16 +67,24 @@ export default {
       experiences: [
         {
           title: 'Front End Engineer',
-          location: 'ACOMART',
+          location: 'DataFirst Technologies',
           description:
-            'Development of Video streaming platforms including afrocinema and afrostream',
-          from: '11/2019',
+            'Developed Landshares, an online real estate management system',
+          from: '04/2021',
           to: 'Present'
         },
         {
           title: 'Front End Engineer',
+          location: 'ACOMART',
+          description:
+            'Development of Video streaming platforms including afrocinema and afrostream',
+          from: '11/2019',
+          to: '04/2021'
+        },
+        {
+          title: 'Front End Engineer',
           location: 'Sterling Bank',
-          description: 'In charge of creating onebank Web',
+          description: 'In charge of developing the Onebank Web Application',
           from: '11/2019',
           to: '07/2020'
         },
