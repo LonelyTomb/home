@@ -38,6 +38,13 @@ export default {
       image: '/svg/suitcase.svg',
       portfolios: [
         {
+          name: 'Niche',
+          image:
+            'https://res.cloudinary.com/nazarick/image/upload/v1663254367/netwiq/Niche_-_Welcome.png',
+          url: 'https://staging-dot-get-niche.uc.r.appspot.com',
+          description: 'tags:nuxt.js;text:Niche website'
+        },
+        {
           name: 'Afrocinema',
           image:
             'https://res.cloudinary.com/nazarick/image/upload/v1612571609/netwiq/Home_AFROCINEMA_1.png',
@@ -59,11 +66,11 @@ export default {
           description: 'tags:nuxt.js|cloudinary|strapi;text:Fluidangle website'
         },
         {
-          name: 'Fount Farms',
+          name: 'Vue Uikit Datatable',
           image:
-            'https://res.cloudinary.com/nazarick/image/upload/v1612569267/netwiq/Home.png',
-          url: 'https://fountfarms.appspot.com',
-          description: 'tags:nuxt.js|cloudinary|strapi;text:Fluidangle website'
+            'https://res.cloudinary.com/nazarick/image/upload/v1663254574/netwiq/Vue_App.png',
+          url: 'https://www.npmjs.com/package/vue-uikit-datatable',
+          description: 'tags:vue.js|npm;text:Vue Uikit Datatable npm package'
         },
         {
           name: 'FluidAngle',
