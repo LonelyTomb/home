@@ -7,7 +7,6 @@
         <span class="mx-1">Garuba</span>
       </h1>
       <p class="description">
-        <span>I am a</span>
         <span class="profession"><b>Front-End Web Developer</b></span>
       </p>
     </div>
