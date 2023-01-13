@@ -67,11 +67,19 @@ export default {
       experiences: [
         {
           title: 'Front End Engineer',
+          location: 'Heroshe',
+          description:
+            'Contributed to the development of the new Customer Frontend UI',
+          from: '08/2021',
+          to: 'Present'
+        },
+        {
+          title: 'Front End Engineer',
           location: 'DataFirst Technologies',
           description:
             'Developed Landshares, an online real estate management system',
           from: '04/2021',
-          to: 'Present'
+          to: '08/2021'
         },
         {
           title: 'Front End Engineer',
