@@ -25,8 +25,7 @@
           <div class="download-resume mt-6 mb-6">
             <a
               class="border-primary border-2 p-3 text-white hover:text-secondary hover:bg-dark"
-              href="https://drive.google.com/open?id=1buyYf4X0NSBUx_5o3rCsQWYV9wctVzTM"
-              target="_blank"
+              href="https://drive.google.com/file/d/1buyYf4X0NSBUx_5o3rCsQWYV9wctVzTM/view?usp=drivesdk"
             >
               Download Resume
             </a>
