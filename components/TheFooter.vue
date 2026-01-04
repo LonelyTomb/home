@@ -1,14 +1,14 @@
 <template>
   <Footer class="p-3 mt-10">
     <div class="social-icons flex flex-row justify-center mb-3">
-      <a href="https://www.twitter.com/lonelytomb" target="_blank">
+      <a href="https://www.twitter.com/eastxic" target="_blank">
         <img
           src="/svg/twitter-sign.svg"
           alt="twitter"
           class="w-6 mx-1 filter-white"
         />
       </a>
-      <a href="https://www.github.com/lonelytomb" target="_blank">
+      <a href="https://www.github.com/eastvictory" target="_blank">
         <img
           src="/svg/github-sign.svg"
           alt="github"
